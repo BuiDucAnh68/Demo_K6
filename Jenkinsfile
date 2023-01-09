@@ -1,11 +1,11 @@
 pipeline{
-//     agent{
-//     kubernetes {
-//         cloud 'kubernetes'
-//         yamlFile 'k8spod.yaml'
-//     }
-//    }
-    agent any
+    agent{
+    kubernetes {
+        cloud 'kubernetes'
+        yamlFile 'k8spod.yaml'
+    }
+   }
+   
     stages{
         stage('Add Curl Container'){
             steps{
